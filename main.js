@@ -87,3 +87,39 @@ function my_keydown(e){
         console.log("l is pressed");
     }
 }
+function Up() {
+    if (player_y>0) {
+        player_y=player_y-block_image_height;
+        console.log("block_image_height="+block_image_height);
+        console.log("player x="+player_x+" ,y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function Down() {
+    if (player_y<450) {
+        player_y=player_y+block_image_height;
+        console.log("block_image_height="+block_image_height);
+        console.log("player x="+player_x+" ,y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function Left() {
+    if (player_x>0) {
+        player_x=player_x-block_image_width;
+        console.log("block_image_width="+block_image_width);
+        console.log("player x="+player_x+" ,y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+function Right() {
+    if (player_x<850) {
+        player_x=player_x+block_image_width;
+        console.log("block_image_width="+block_image_width);
+        console.log("player x="+player_x+" ,y="+player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
